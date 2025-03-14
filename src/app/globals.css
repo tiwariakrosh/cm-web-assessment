@@ -3,7 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans: var(--font-inter);
+  --primary: #3b82f6;
+  --gradient-start: 213 100% 96%;
+  --gradient-middle: 270 100% 90%;
+  --gradient-end: 213 100% 96%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,5 +19,48 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gradient-start)) 0%,
+    hsl(var(--gradient-middle)) 50%,
+    hsl(var(--gradient-end)) 100%
+  );
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:hover::after {
+  height: 4px;
+  border-radius: 20px;
+  background-color: var(--primary);
+  width: 30px;
+  top: 25px;
+  position: absolute;
+  content: "";
+  left: 0;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700;
+  }
 }

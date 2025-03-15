@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #3b82f6;
+  --primary: #0953e9;
   --gradient-start: 213 100% 96%;
   --gradient-middle: 270 100% 90%;
   --gradient-end: 213 100% 96%;
@@ -48,15 +48,32 @@ body {
   position: relative;
 }
 
-.nav-item:hover::after {
-  height: 4px;
-  border-radius: 20px;
+.active-menu::after {
+  height: 3px;
+  border-radius: 5px;
   background-color: var(--primary);
-  width: 30px;
+  width: 33px;
   top: 25px;
   position: absolute;
   content: "";
   left: 0;
+}
+
+.testimonial div:nth-child(2) {
+  margin-bottom: 34px;
+}
+
+.container {
+  width: 100%;
+  @media (width >= 40rem /* 640px */) {
+    max-width: 40rem /* 640px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 90%;
+  }
+  @media (width >= 75rem) {
+    max-width: 74rem;
+  }
 }
 
 @layer components {

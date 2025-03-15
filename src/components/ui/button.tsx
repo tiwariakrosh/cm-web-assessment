@@ -24,18 +24,20 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const baseStyles =
-    "rounded-md font-medium transition-colors flex items-center justify-center";
+    "rounded-lg font-medium transition-colors flex items-center justify-center";
 
   const variantStyles = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
-    secondary: "bg-white text-blue-600 hover:bg-blue-50",
-    outline: "border border-blue-600 text-blue-600 hover:bg-blue-50",
+    primary:
+      "bg-[#0953e9] text-white border hover:border-[#0953e9] hover:text-[#0953e9] hover:bg-transparent",
+    secondary: "bg-white text-[#0953e9] hover:bg-blue-50",
+    outline:
+      "border border-[#0953e9] text-[#0953e9] hover:bg-[#0953e9] hover:text-white",
   };
 
   const sizeStyles = {
     sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3",
-    lg: "px-8 py-4 text-lg",
+    md: "px-5 py-3",
+    lg: "px-6 py-4 text-xl",
   };
 
   return (

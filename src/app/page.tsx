@@ -9,6 +9,11 @@ import {
 } from "../lib/constants";
 import PurchaseLessonsSection from "@/components/sections/purchase-lession-section";
 import CoursesSection from "@/components/sections/course-section";
+import WhatYouGetSection from "@/components/sections/benefits-section";
+import HowItWorksSection from "@/components/sections/how-it-work-section";
+import CtaSection from "@/components/sections/cta-section";
+import TestimonialsSection from "@/components/sections/testimonial-sectrion";
+import FaqSection from "@/components/sections/faqs-section";
 
 export default function Home() {
   return (
@@ -30,12 +35,11 @@ export default function Home() {
           buttonLink={PURCHASE_LESSONS_CONTENT.buttonLink}
           illustration={PURCHASE_LESSONS_CONTENT.illustration}
         />
-        {/*
-        <BenefitsSection />
-        <HowItWorks />
-        <Testimonials />
+        <WhatYouGetSection />
+        <HowItWorksSection />
         <CtaSection />
-        <FaqSection /> */}
+        <TestimonialsSection />
+        <FaqSection />
       </main>
       <Footer
         getInTouch={FOOTER_CONTENT.getInTouch}

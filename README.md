@@ -25,16 +25,16 @@ If versions are insufficient, update them via their respective official websites
 Here are the detailed instructions to get the project up and running:
 
 1. **Clone the Repository**
+
    - **Instruction**: Use Git to clone the project from its repository.
    - **Command**:
+
      ```bash
      git clone https://github.com/tiwariakrosh/cm-web-assessment.git
+
+     cd cm-web-assessment
+
+     yarn install
+
+     yarn dev
      ```
-
-```bash
-cd cm-web-assessment
-
-yarn insytall
-
-yarn dev
-```
